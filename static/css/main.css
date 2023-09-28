@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.body {
+    background-color: rgb(137, 137, 214);
+}
+input {
+    display:flex;
+    width:80%;
+    margin:10px 0;
+    padding:10px;
+}
+.title-transfer, .title-cancel, .title-submit {
+    font-size: 60px;
+}
+
+.transfer-money {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.accept-money, .cancel-money {
+    display: table;
+    height: 300px;
+}
+.container-transfer, .container-accept-transfer, .container-cancel-transfer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(218, 214, 214);
+    border: 3px solid black;
+    border-radius: 20%;
+    width: 600px;
+    height: 700px;
+}
+
+    
+.user_info {
+    display: flex;
+}
+
+.container-accept-transfer, .container-cancel-transfer {
+    display: none;
+} 
+
+
+.head-transfer, .head-accept-transfer, .head-cancel-transfer {
+    width: 600px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.body-transfer, .body-accept-transfer, .body-cancel-transfer {
+    width: 600px;
+}
+
+.body-accept-transfer {
+    display: block;
+}
+
+.transfer_btn {
+    text-decoration: none;
+    display: inline-block;
+    width: 210px;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 45px;
+    margin: 10px 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    font-weight: 600;
+    color: #524f4e;
+    background: white;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, .1);
+    transition: .3s;
+  }
+
+.transfer_btn:hover {
+    background: #2EE59D;
+    box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
+    color: white;
+    transform: translateY(-7px);
+}
+
+.select-account, .current-account {
+    width: 85%;
+    padding:10px;
+    border-radius:10px;
+    margin-bottom: 12px;
+}
+
+.submit_btn, .cancel_btn {
+    text-decoration: none;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 45px;
+    border-radius: 45px;
+    margin: 10px 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    font-weight: 600;
+    color: #524f4e;
+    background: white;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, .1);
+    transition: .3s;
+}
+
+
+
+.submit_btn:hover {
+    background: hsl(66, 71%, 41%);
+    box-shadow: 0 15px 20px rgba(200, 238, 33, 0.4);
+    color: white;
+    transform: translateY(-7px);
+}
+
+.cancel_btn:hover {
+    background: hsl(0, 81%, 51%);
+    box-shadow: 0 15px 20px rgba(180, 12, 12, 0.4);
+    color: white;
+    transform: translateY(-7px);
+}
+
+.div-submit-transfers, .div-cancel-transfers {
+    margin: 10px 10px ;
+    border: 2px solid black;
+    border-radius: 30px;
+    float: left;
+    width: 275px;
+    height: 120px;
+}
+
+
+.current-account {
+    margin-top: 10px;
+    width: 425px;
+}
+.select_accs {
+    margin-bottom: 12px;
+}
+
+.balance {
+    font-size: 40px;
+    margin-left: 100px;
+}
+
+.cur_acc {
+    font-size: 40px;
+}
+
+.chng_btns-transfer, .chng_btns-submit, .chng_btns-cancel {
+    margin-top: 40px;
+    width: 600px;
+    height: 160px;
+    display: flex;
+    justify-content: center;
+}
+
+.change-to-submit, .change-to-cancel, .change-to-transfer {
+    margin-top: 30px;
+    width: 220px;
+    height: 100px;
+    text-decoration: none;
+    display: inline-block;
+    padding: 12px 40px;
+    margin: 10px 20px;
+    border-radius: 30px;
+    background-image: linear-gradient(45deg, #6ab1d7 0%, #33d9de 50%, #002878 100%);
+    background-position: 100% 0;
+    background-size: 200% 200%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    color: white;
+    box-shadow: 0 16px 32px 0 rgba(0, 40, 120, .35);
+    transition: .5s;
+}
+.change-to-submit:hover, .change-to-cancel:hover, .change-to-transfer:hover {
+    box-shadow: 0 0 0 0 rgba(0, 40, 120, 0);
+    background-position: 0 0;
+}
+
+
+.from-who, .to-whom{
+    margin-bottom: 3px;
+}
+
+.from-who, .amount-of-cancel, .amount-of-submit, .to-whom  {
+    margin-left: 4px;
+    font-size: 18px;
+}
+
+
+.code-word-accept-div {
+    display: none;
+}

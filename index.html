@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/main.css">
+    <title>Переводы денег</title>
+</head>
+<body class="body">
+    <div class="user_info">
+        <div class="cur_acc">
+            <h1 class="cur_acc">Адрес вашего аккаунта</h1>
+        </div>
+        <div class="user-balance">
+            <h1 class="balance">Ваш баланс:</h1>
+        </div>
+    </div>
+    <!-- Отправить деньги -->
+    <div class="container-transfer">
+        <div class="head-transfer">
+            <h1 class="title-transfer">Транзакции</h1>
+        </div>
+        <div class="body-transfer">
+            <div class="transfer-money">
+                <h1 class="select_accs">Выберете аккаунт</h1>
+                <input type="text" class="amount_of" placeholder="Введите количество эфиров" oninput="this.value = this.value.replace(/[^0-9\\.]/g, '').replace(/(\\..*)\\./g, '$1')">
+                <input type="text" class="code-word" placeholder="Введите кодовое слово">
+                <button class="transfer_btn">Перевод</button>
+                <div class="chng_btns-transfer">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Принять деньги -->
+    <div class="container-accept-transfer">
+        <div class="head-accept-transfer">
+            <h1 class="title-submit">Получить деньги</h1>
+        </div>
+        <div class="body-accept-transfer">
+            <div class="accept-money"></div>
+            <div class="chng_btns-submit"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Отменить транзакцию -->
+    <div class="container-cancel-transfer">
+        <div class="head-cancel-transfer">
+            <h1 class="title-cancel">Отменить отправку</h1>
+        </div>
+        <div class="body-cancel-transfer">
+            <div class="cancel-money"></div>
+            <div class="chng_btns-cancel"></div>
+        </div>
+    </div>
+
+    <script src="/static/js/web3.min.js"></script>
+    <script src="/static/js/abi.js"></script>
+    <script type="module" src="/static/js/transfer.js"></script>
+    <script type="module" src="/front/front.js"></script>
+</body>
+</html>
