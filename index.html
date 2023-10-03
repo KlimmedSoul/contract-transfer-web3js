@@ -24,7 +24,14 @@
             <div class="transfer-money">
                 <h1 class="select_accs">Выберете аккаунт</h1>
                 <input type="text" class="amount_of" placeholder="Введите количество эфиров" oninput="this.value = this.value.replace(/[^0-9\\.]/g, '').replace(/(\\..*)\\./g, '$1')">
-                <input type="text" class="code-word" placeholder="Введите кодовое слово">
+                <div class="input-code-word">
+                    <input type="password" class="code-word" placeholder="Введите кодовое слово" >
+                    <div class="checkbox-wrapper-6">
+                        <h3 class="show">Показать кодовое слово</h3>
+                        <input class="tgl tgl-light" id="cb1-6" type="checkbox"/>
+                        <label class="tgl-btn" for="cb1-6">
+                    </div>
+                </div>
                 <button class="transfer_btn">Перевод</button>
                 <div class="chng_btns-transfer">
 
