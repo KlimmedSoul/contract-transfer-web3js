@@ -47,7 +47,7 @@ function cancel_transfer(uint id_transfer) public payable {
         require(all_transfers[id_transfer].from_who == msg.sender, "you are not the sender");
         require(all_transfers[id_transfer].status_accept == false, "money already transfered");
         require(all_transfers[id_transfer].closed == false, "transfer alredy closed");
-        payable(msg.sender).transfer(all_transfers[id_transfer].amount_of*10**18);
+        payable(msg.sender).transfer(all_transfers[id_transfer].amount_of);
         all_transfers[id_transfer].closed = true;
         all_transfers[id_transfer].canceled = true;
     }
