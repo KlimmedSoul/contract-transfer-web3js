@@ -17,13 +17,31 @@ export function renderTransfer() {
             curAcc.appendChild(curOption)
         }
 
+        if (localStorage.getItem("currentAccount")) {
+            for (let i = 0; i < curAcc.length; i ++) {
+                if (curAcc[i].value === localStorage.getItem("currentAccount")) {
+                    curAcc[i].selected = true
+                }
+            }
+        }
+
         getBalances(accounts).then((balances) => {
             for(let i = 0; i < balances.length; i++) {
                 curAcc.options[i].dataset['balance'] = balances[i]/10**18
                 balanceUser.textContent = balances[0]/10**18 + " eth"
             }
+        }).then(() => {
+            if (localStorage.getItem("currentAccount")) {
+                for (let i = 0; i < curAcc.length; i ++) {
+                    if (curAcc[i].value === localStorage.getItem("currentAccount")) {
+                        curAcc[i].selected = true
+                        balanceUser.textContent = curAcc.options[i].dataset.balance + " eth "
+                    }
+                }
+            }            
         })
     })
+
 
     const balanceUser = document.createElement('h1')
     balanceUser.classList.add("balance")
@@ -56,11 +74,15 @@ export function renderTransfer() {
             }
 
             console.log(codeWord.value);
+            localStorage.setItem("currentAccount", currentAccount.options[currentAccount.selectedIndex].value)
             await transferMoneyToConctract(currentAccount.options[currentAccount.selectedIndex].value, selectAccount.options[selectAccount.selectedIndex].value, values, codeWord.value)
+            
         }
         catch (error) {
             console.error(error)
         }
+
+
         location.reload()
     })
     
